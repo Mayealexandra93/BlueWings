@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const path = require('path');
 const cors = require('cors');
 
 const app = express();
@@ -10,6 +11,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, '../')));
 const USERS_FILE = './users.json'; // JSON file to store user data
 
 // Helper to read users from JSON
@@ -130,7 +132,9 @@ app.post('/api/login', (req, res) => {
     });
 });
 
-
+app.get('/',(req,res)=>{
+    return res.status(404).send({ success: false, message: "Successfully Deployed" });
+})
 
 app.get('/api/user/:email', (req, res) => {
     const email = req.params.email;

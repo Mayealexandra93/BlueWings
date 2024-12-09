@@ -93,7 +93,7 @@
 				};
 
 				// Call API
-				fetch('http://localhost:4200/api/signup', {
+				fetch('https://airline-ticket-booking-33hk.onrender.com/api/signup', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -136,7 +136,7 @@
 				};
 		
 				// API Call to validate user
-				fetch("http://localhost:4200/api/login", {
+				fetch("https://airline-ticket-booking-33hk.onrender.com/api/login", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
@@ -265,15 +265,15 @@
 	//
 	
 	// Get today's date in YYYY-MM-DD format
-	const today = new Date();
-	const year = today.getFullYear();
-	const month = String(today.getMonth() + 1).padStart(2, '0'); // Add leading zero if needed
-	const day = String(today.getDate()).padStart(2, '0'); // Add leading zero if needed
-	const todayDate = `${year}-${month}-${day}`;
+	// const today = new Date();
+	// const year = today.getFullYear();
+	// const month = String(today.getMonth() + 1).padStart(2, '0'); // Add leading zero if needed
+	// const day = String(today.getDate()).padStart(2, '0'); // Add leading zero if needed
+	// const todayDate = `${year}-${month}-${day}`;
 
-	// Set the min attribute to today's date for the relevant date inputs
-	document.getElementById('probootstrap-date-departure').setAttribute('min', todayDate);
-	document.getElementById('probootstrap-date-arrival').setAttribute('min', todayDate);
+	// // Set the min attribute to today's date for the relevant date inputs
+	// document.getElementById('probootstrap-date-departure').setAttribute('min', todayDate);
+	// document.getElementById('probootstrap-date-arrival').setAttribute('min', todayDate);
 
 	//
 	
